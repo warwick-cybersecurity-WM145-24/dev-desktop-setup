@@ -1,0 +1,11 @@
+---
+- hosts: all
+
+  pre_tasks:
+    - import_tasks: tasks/users.yml
+      tags: users
+
+- name: Ubuntu desktop environment playbook
+  hosts: localhost
+  roles:
+    - { role: docker, become: true }

@@ -13,7 +13,6 @@
     - cifs-utils
     - mpv
     - pinta # light paint.net equivalent
-    - rhythmbox
     - rxvt-unicode-256color
     - sox # to play sounds
     - tilda # lighter than guake

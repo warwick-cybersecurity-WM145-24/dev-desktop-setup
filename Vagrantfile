@@ -14,4 +14,5 @@ Vagrant.configure(2) do |config|
     ansible.playbook = "my-machine.yml"
     ansible.become = true
   end
+
 end

@@ -9,13 +9,16 @@
   - import_tasks: tasks/general.yml
     tags: general
 
+  - import_tasks: tasks/jujhar-apt-software.yml
+    tags: my-software
+
 - name: Ubuntu desktop environment playbook
   hosts: all
   roles:
     #- { role: arc-theme, become: true }
     #- { role: chromium, become: true }
     #- { role: dbeaver, become: true }
-    - { role: desktop, become: true }
+    #- { role: desktop, become: true }
     # - { role: desktop-cleanup, become: true }
     # - { role: docker, become: true }
     # - { role: filezilla, become: true }

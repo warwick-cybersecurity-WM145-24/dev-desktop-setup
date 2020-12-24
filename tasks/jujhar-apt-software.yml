@@ -1,0 +1,52 @@
+- name: Add Audacious latest repository
+  apt_repository: repo="ppa:ubuntuhandbook1/apps" state=present
+
+- name: Install Jujhar's apt Software
+  apt:
+    pkg:
+      - audacious
+      - audacity
+      - bmon
+      - chrome-gnome-shell
+      - chromium-browser
+      - clamav
+      - clamav-daemon
+      - clamtk
+      - curl
+      - forensics-all
+      - git
+      - gnome-tweaks
+      - gnome-shell-extension-no-annoyance
+      - gnome-shell-extension-caffeine
+      - htop
+      - inotify-tools
+      - jq
+      - libcanberra-gtk-module
+      - lastpass-cli
+      - liferea
+      - mycli
+      - ncdu
+      - nethogs
+      - nautilus-wipe
+      - net-tools
+      - openvpn
+      - pandoc
+      - pass
+      - python3-pip
+      - powertop
+      - shellcheck
+      - socat
+      - terminator
+      - tlp
+      - tlp-rdw
+      - tig
+      - tree
+      - tmux
+      - wget
+      - vim
+      - vlc
+      - xstow
+      - youtube-dl
+      - zsh
+    state: latest
+    update_cache: true

@@ -1,9 +1,7 @@
 ---
 
 - name: Install common desktop packages
-  apt: pkg=['bleachbit', 'easytag', 'byzanz', 'geany', 'libnotify-bin', 'inotify-tools', 'meld', 'cifs-utils',
-'mpv', 'pinta', 'rxvt-unicode-256color', 'sox', 'tilda', 'ubuntu-restricted-
-extras', 'unetbootin', 'vlc', 'wmctrl', 'xclip', 'xdotool'] state=latest update_cache=yes cache_valid_time={{ aptcachetime }}
+  apt: pkg:['bleachbit', 'easytag', 'byzanz', 'geany', 'libnotify-bin', 'inotify-tools', 'meld', 'cifs-utils', 'mpv', 'pinta', 'rxvt-unicode-256color', 'sox', 'tilda', 'ubuntu-restricted-extras', 'unetbootin', 'vlc', 'wmctrl', 'xclip', 'xdotool'] state=latest update_cache=yes cache_valid_time={{ aptcachetime }}
     # - bleachbit
     # - easytag # audio files metadata management
     # - byzanz # screen recording
@@ -25,7 +23,7 @@ extras', 'unetbootin', 'vlc', 'wmctrl', 'xclip', 'xdotool'] state=latest update_
     # - xdotool # to control windows
 
 - name: Install common desktop packages if Ubuntu 16.04
-  apt: pkg=['fonts-hack-ttf'] state=latest update_cache=yes cache_valid_time={{ aptcachetime }}
+  apt: pkg:['fonts-hack-ttf'] state=latest update_cache=yes cache_valid_time={{ aptcachetime }}
   when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '16.04'
 
 - name: Block Ubuntu product search in system host file

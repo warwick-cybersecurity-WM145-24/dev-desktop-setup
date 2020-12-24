@@ -7,7 +7,14 @@
   changed_when: mysql_workbench_check_deb.rc == 1
 
 - name: Download MySQL WorkBench
-  get_url: url="http://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-6.3.8-1ubu1604-amd64.deb" dest="/tmp/download-mysql-workbench-latest.deb"
+  get_url: url="https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community_8.0.22-1ubuntu20.10_amd64.deb " dest="/tmp/download-mysql-workbench-latest.deb"
+  when: mysql_workbench_check_deb.rc == 1
+
+- name: Install deps
+  register: mysql_workbench_deps
+  apt:
+    pkg:
+    - libcurl4
   when: mysql_workbench_check_deb.rc == 1
 
 - name: Install MySQL WorkBench

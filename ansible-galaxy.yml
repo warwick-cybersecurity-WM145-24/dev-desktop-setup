@@ -1,0 +1,6 @@
+---
+- name: geerlingguy.docker
+  version: 2.9.0
+
+- name: pixelart.chrome
+  version: 1.1.0

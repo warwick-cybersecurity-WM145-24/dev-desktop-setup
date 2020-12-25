@@ -75,3 +75,9 @@
       - zsh
     state: latest
     update_cache: true
+
+- name: Install bottle python package with version specifiers
+  pip:
+    name:
+      - aws-cli
+      - termtime

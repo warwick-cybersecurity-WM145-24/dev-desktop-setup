@@ -2,19 +2,19 @@
 - hosts: all
 
   pre_tasks:
-    - import_tasks: tasks/users.yml
-      tags: users
+    - import_tasks: tasks/general.yml
+      tags: general
 
-  tasks:
-  - import_tasks: tasks/general.yml
-    tags: general
+  # tasks:
+  # - import_tasks: tasks/jujhar-software.yml
+  #   tags: software
 
 - name: Ubuntu desktop environment playbook
   hosts: all
   roles:
-    - { role: arc-theme, become: true }
-    - { role: dbeaver, become: true }
-    - { role: desktop-cleanup, become: true }
+    # - { role: arc-theme, become: true }
+    # - { role: dbeaver, become: true }
+    #- { role: desktop-cleanup, become: true }
     - { role: desktop-preferences, become: true }
     - { role: libreoffice, become: true }
     - { role: mysql-workbench, become: true }

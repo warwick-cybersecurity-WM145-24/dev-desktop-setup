@@ -5,24 +5,22 @@
     - import_tasks: tasks/general.yml
       tags: general
 
-  # tasks:
-  # - import_tasks: tasks/jujhar-software.yml
-  #   tags: software
+  tasks:
+  - import_tasks: tasks/jujhar-software.yml
+    tags: software
 
 - name: Ubuntu desktop environment playbook
   hosts: all
   roles:
-    # - { role: arc-theme, become: true }
-    # - { role: dbeaver, become: true }
-    #- { role: desktop-cleanup, become: true }
+    - { role: arc-theme, become: true }
+    - { role: dbeaver, become: true }
+    - { role: desktop-cleanup, become: true }
+    - { role: alvistack.libreoffice, become: true }
     - { role: desktop-preferences, become: true }
-    - { role: libreoffice, become: true }
+    - { role: geerlingguy.docker, become: true }
     - { role: mysql-workbench, become: true }
     - { role: nodejs, become: true }
-    - { role: notepadqq, become: true }
+    - { role: pixelart.chrome, become: true }
     - { role: remmina, become: true }
-    - { role: ultra-flat-icons, become: true }
     - { role: vagrant, become: true }
     ##- { role: virtualbox, become: true }
-    - { role: wine, become: true }
-    - { role: xmind, become: true }

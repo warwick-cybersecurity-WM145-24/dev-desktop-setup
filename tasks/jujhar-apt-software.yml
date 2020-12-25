@@ -7,13 +7,17 @@
       - audacious
       - audacity
       - bmon
+      - build-essential
       - chrome-gnome-shell
       - chromium-browser
       - clamav
       - clamav-daemon
       - clamtk
       - curl
+      - filezilla
+      - firefox
       - forensics-all
+      - gcc
       - git
       - gimp
       - gnome-tweaks
@@ -21,35 +25,53 @@
       - gnome-shell-extension-caffeine
       - golang-go
       - golint
+      - grep
       - htop
       - inotify-tools
+      - iotop
       - jq
       - libcanberra-gtk-module
       - lastpass-cli
       - liferea
+      - make
       - mycli
       - ncdu
+      - nmap
       - nethogs
+      - nautilus-admin
+      - nautilus-extension-gnome-terminal
+      - nautilus-font-manager
+      - nautilus-image-converter
       - nautilus-wipe
       - net-tools
       - openvpn
       - pandoc
       - pass
+      - picard #- Next-Generation MusicBrainz audio files tagger
       - python3-pip
       - powertop
+      - pwgen
+      - rsync
       - shellcheck
+      - sox #- Swiss army knife of sound processing
       - socat
+      - tar
       - terminator
       - tlp
       - tlp-rdw
       - tig
       - tree
       - tmux
+      - unzip
+      - ubuntu-restricted-extras # MP3, Microsoft fonts, Flash plugin, LAME and DVD playback
       - wget
+      - whois
       - vim
       - vlc
       - xstow
+      - xclip # to manipulate the clipboard
       - youtube-dl
+      - zip
       - zsh
     state: latest
     update_cache: true

@@ -7,56 +7,6 @@
     line: fs.inotify.max_user_watches=1048576
 
 - name: Install Jujhar sudoers
-  lineinfile:
-    path: /etc/sudoers.d/jujhar
-    line: jujhar ALL=(ALL) NOPASSWD:ALL
-
-- name: Set jujhar keyboard shortcuts
-  command: "{{ item }}"
-  with_items:
-    - dconf write /org/gnome/settings-daemon/plugins/media-keys/home "'<Super>e'"
-    #- dconf write /org/gnome/settings-daemon/plugins/media-keys/play "'Pause'"
-    - dconf write /org/gnome/settings-daemon/plugins/media-keys/www "'<Super>w'"
-
-- name: Set jujhar nautilus conf
-  command: "{{ item }}"
-  with_items:
-    - dconf write /org/gtk/settings/file-chooser/show-hidden true
-    - dconf write /org/gnome/nautilus/preferences/default-folder-viewer "'list-view'"
-    - dconf write /org/gnome/nautilus/icon-view/captions "['size', 'date_modified', 'none']"
-    - dconf write /org/gnome/nautilus/preferences/show-create-link true
-    - dconf write /org/gnome/nautilus/preferences/show-create-link true
-
-- name: Set jujhar mousey conf
-  command: "{{ item }}"
-  with_items:
-    - dconf write /org/gnome/desktop/peripherals/touchpad/natural-scroll false
-    - dconf write /org/gnome/desktop/peripherals/mouse/speed 1.0
-    - dconf write /org/gnome/desktop/peripherals/touchpad/tap-to-click false
-    - dconf write /org/gnome/desktop/peripherals/mouse/accel-profile "'adaptive'"
-
-- name: Set jujhar display settings
-  command: "{{ item }}"
-  with_items:
-    - dconf write /org/gnome/desktop/interface/gtk-theme "'Adwaita-dark'"
-    - dconf write /org/gnome/shell/extensions/user-theme/name "'Yaru-dark'"
-    - dconf write /org/gnome/desktop/interface/icon-theme "'Humanity-Dark'"
-    - dconf write /org/gnome/settings-daemon/plugins/color/night-light-enabled true
-    - dconf write /org/gnome/settings-daemon/plugins/color/night-light-schedule-automatic true
-
-- name: Set jujhar other settings
-  command: "{{ item }}"
-  with_items:
-    - dconf write /org/gnome/shell/enable-hot-corners true
-    - dconf write /org/gnome/settings-daemon/peripherals/keyboard/numlock-state true
-    - dconf write /org/gnome/desktop/background/show-desktop-icons true
-    - dconf write /org/gnome/desktop/peripherals/touchpad/disable-while-typizng true
-    - dconf write /org/gnome/desktop/interface/gtk-enable-primary-paste false
-    - dconf write /org/gnome/desktop/interface/clock-show-date true
-    - dconf write /org/gnome/desktop/calendar/show-weekdate true
-    - dconf write /org/gnome/settings-daemon/plugins/xsettings/hinting "'medium'"
-    - dconf write /org/gnome/desktop/wm/preferences/button-layout "':appmenu,minimize,maximize,close'"
-    - dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']"
-    - dconf write /org/gnome/shell/world-clocks/locations "[<(uint32 2, <('Vancouver', 'CYVR', true, [(0.85841109795478021, -2.1496638678574467)], [(0.85957465660720722, -2.1490820798045869)])>)>, <(uint32 2, <('Santa Fe', 'KSAF', true, [(0.62152145066582187, -1.8517070699033837)], [(0.62285521382690334, -1.8489633948659563)])>)>, <(uint32 2, <('New York', 'KNYC', true, [(0.71180344078725644, -1.2909618758762367)], [(0.71059804659265924, -1.2916478949920254)])>)>, <(uint32 2, <('New Delhi', 'VIDP', true, [(0.49858239547081096, 1.345939747314058)], [(0.49916416607037828, 1.3473941825396225)])>)>]"
-    - dconf write /desktop/ibus/panel/emoji/hotkey "@as []"
-    - dconf write /org/gnome/shell/favorite-apps "['chromium-browser.desktop', 'firefox.desktop', 'org.gnome.Nautilus.desktop', 'code.desktop', 'audacious.desktop','typora.desktop']"
+  copy:
+    dest: /etc/sudoers.d/jujhar
+    content: jujhar ALL=(ALL) NOPASSWD:ALL

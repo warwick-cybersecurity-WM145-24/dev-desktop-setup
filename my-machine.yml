@@ -8,6 +8,8 @@
   tasks:
   - import_tasks: tasks/jujhar-software.yml
     tags: software
+
+  post_tasks:
   - import_tasks: tasks/jujhar-config.yml
     tags: config
 

@@ -82,5 +82,5 @@
 - name: Install python packages
   pip:
     name:
-      - aws-cli
+      #- aws-cli
       - termtime

@@ -9,18 +9,16 @@
   - import_tasks: tasks/jujhar-software.yml
     tags: software
 
-- name: Ubuntu desktop environment playbook
+- name: Jujhar Ubuntu desktop environment
   hosts: all
   roles:
+    - { role: alvistack.libreoffice, become: true }
     - { role: arc-theme, become: true }
     - { role: dbeaver, become: true }
     - { role: desktop-cleanup, become: true }
-    - { role: alvistack.libreoffice, become: true }
     - { role: desktop-preferences, become: true }
     - { role: geerlingguy.docker, become: true }
     - { role: mysql-workbench, become: true }
     - { role: nodejs, become: true }
     - { role: pixelart.chrome, become: true }
     - { role: remmina, become: true }
-    - { role: vagrant, become: true }
-    ##- { role: virtualbox, become: true }

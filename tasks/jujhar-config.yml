@@ -1,0 +1,14 @@
+- name: Remove ubuntu dock
+  command: apt remove gnome-shell-extension-ubuntu-dock
+
+- name: Set max file watches for crashplan inotify.
+  lineinfile:
+    path: /etc/sysctl.conf
+    line: fs.inotify.max_user_watches=1048576
+
+- name: Set jujhar keyboard shortcuts
+  command: "{{ item }}"
+  with_items:
+	- dconf write /org/gnome/settings-daemon/plugins/media-keys/home "'<Super>e'"
+	#- dconf write /org/gnome/settings-daemon/plugins/media-keys/play "'Pause'"
+	- dconf write /org/gnome/settings-daemon/plugins/media-keys/www "'<Super>w'"

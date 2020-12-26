@@ -45,10 +45,12 @@
       - nethogs
       - net-tools
       - nmap
+      - obs-studio # live stream tool
+      - openshot # video editor
       - openvpn
       - pandoc
       - pass
-      - picard #- Next-Generation MusicBrainz audio files tagger
+      - picard # Next-Generation MusicBrainz audio files tagger
       - powertop
       - pwgen
       - python3-pip

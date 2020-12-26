@@ -8,6 +8,8 @@
   tasks:
   - import_tasks: tasks/jujhar-software.yml
     tags: software
+  - import_tasks: tasks/jujhar-config.yml
+    tags: config
 
 - name: Jujhar Ubuntu desktop environment
   hosts: all

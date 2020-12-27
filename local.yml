@@ -15,6 +15,7 @@
       tags: config
 
 - name: Jujhar extra packages
+  hosts: localhost
   roles:
     - { role: alvistack.audacious, become: true }
     - { role: alvistack.libreoffice, become: true }

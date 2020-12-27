@@ -16,15 +16,17 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision "prepare-installation", privileged: true, type: "shell", inline: <<-SHELL
   apt-get update
-  apt-get install -y python3-pip python3-dev libffi-dev libssl-dev openssh-server
-  pip3 install ansible markupsafe
+  apt-get install -y ansible git
+  ansible-pull --url https://github.com/jujhars13/my-ubuntu-setup.git
+  #apt-get install -y python3-pip python3-dev libffi-dev libssl-dev openssh-server
+  #pip3 install ansible markupsafe
   SHELL
 
-  config.vm.provision "ansible_local" do |ansible|
-    ansible.compatibility_mode = "2.0"
-    ansible.playbook = "local.yml"
-    ansible.galaxy_role_file = "ansible-galaxy.yml"
-    ansible.become = true
-  end
+  # config.vm.provision "ansible_local" do |ansible|
+  #   #ansible.compatibility_mode = "2.0"
+  #   ansible.playbook = "local.yml"
+  #   ansible.galaxy_role_file = "ansible-galaxy.yml"
+  #   ansible.become = true
+  # end
 
 end

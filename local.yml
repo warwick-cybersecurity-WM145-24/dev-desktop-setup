@@ -14,8 +14,7 @@
     - import_tasks: tasks/jujhar-config.yml
       tags: config
 
-- name: Jujhar Ubuntu desktop environment
-  hosts: all
+- name: Jujhar extra packages
   roles:
     - { role: alvistack.audacious, become: true }
     - { role: alvistack.libreoffice, become: true }

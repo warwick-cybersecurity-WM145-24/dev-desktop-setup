@@ -22,7 +22,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision "ansible_local" do |ansible|
     ansible.compatibility_mode = "2.0"
-    ansible.playbook = "my-machine.yml"
+    ansible.playbook = "local.yml"
     ansible.galaxy_role_file = "ansible-galaxy.yml"
     ansible.become = true
   end

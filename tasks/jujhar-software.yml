@@ -1,10 +1,6 @@
-- name: Add Audacious latest repository
-  apt_repository: repo="ppa:ubuntuhandbook1/apps" state=present
-
 - name: Install Jujhar's apt Software
   apt:
     pkg:
-      - audacious
       - audacity
       - bmon
       - build-essential

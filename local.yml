@@ -1,5 +1,6 @@
----
-- hosts: all
+- hosts: localhost
+  connection: local
+  become: true
 
   pre_tasks:
     - import_tasks: tasks/general.yml
@@ -16,11 +17,14 @@
 - name: Jujhar Ubuntu desktop environment
   hosts: all
   roles:
+    - { role: alvistack.audacious, become: true }
     - { role: alvistack.libreoffice, become: true }
     - { role: arc-theme, become: true }
     - { role: dbeaver, become: true }
     - { role: desktop-cleanup, become: true }
     - { role: desktop-preferences, become: true }
+    - { role: gantsign.oh-my-zsh, become: true }
+    - { role: gantsign.visual-studio-code, become: true }
     - { role: geerlingguy.docker, become: true }
     - { role: mysql-workbench, become: true }
     - { role: nodejs, become: true }

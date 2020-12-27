@@ -17,7 +17,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision "prepare-installation", privileged: true, type: "shell", inline: <<-SHELL
   apt-get update
   apt-get install -y ansible git
-  ansible-pull -vv --url https://github.com/jujhars13/my-ubuntu-setup.git
+  ansible-pull -v --url https://github.com/jujhars13/my-ubuntu-setup.git
   #apt-get install -y python3-pip python3-dev libffi-dev libssl-dev openssh-server
   #pip3 install ansible markupsafe
   SHELL

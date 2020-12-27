@@ -13,7 +13,7 @@ Use with `ansible-pull` to initialise a local install
 
 ```bash
 apt-get update && apt-get install -y ansible
-sudo ansible-pull -u https://github.com/jujhars13/my-ubuntu-setup.git
+sudo ansible-pull --url https://github.com/jujhars13/my-ubuntu-setup.git
 ```
 
 ## Testing

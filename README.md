@@ -12,7 +12,7 @@ My Ubuntu setup build using ansible and tested using docker and vagrant
 Use with `ansible-pull` to initialise a local install
 
 ```bash
-apt-get update && apt-get install -y ansible
+apt-get update && apt-get install -y ansible git
 sudo ansible-pull --url https://github.com/jujhars13/my-ubuntu-setup.git
 ```
 

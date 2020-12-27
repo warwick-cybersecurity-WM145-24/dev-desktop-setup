@@ -67,6 +67,10 @@
       - wget
       - whois
       - vim
+      - vim-pathogen
+      - vim-gtk3
+      - vim-syntastic
+      - vim-syntax-docker
       - vlc
       - xclip # to manipulate the clipboard
       - xstow

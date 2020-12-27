@@ -1,5 +1,5 @@
 - name: Remove ubuntu dock
-  command: apt remove gnome-shell-extension-ubuntu-dock
+  command: apt remove -y gnome-shell-extension-ubuntu-dock
 
 - name: Set max file watches for crashplan inotify.
   lineinfile:

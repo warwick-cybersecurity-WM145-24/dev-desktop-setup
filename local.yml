@@ -1,4 +1,4 @@
-- hosts: all
+- hosts: localhost
   connection: local
   become: true
 
@@ -7,12 +7,12 @@
       tags: general
 
   tasks:
-  - import_tasks: tasks/jujhar-software.yml
-    tags: software
+    - import_tasks: tasks/jujhar-software.yml
+      tags: software
 
   post_tasks:
-  - import_tasks: tasks/jujhar-config.yml
-    tags: config
+    - import_tasks: tasks/jujhar-config.yml
+      tags: config
 
 - name: Jujhar Ubuntu desktop environment
   hosts: all

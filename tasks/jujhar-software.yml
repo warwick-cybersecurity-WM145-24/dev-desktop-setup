@@ -2,6 +2,7 @@
   apt:
     pkg:
       - audacity
+      - bambam # baby keyboard mashing software
       - bmon
       - build-essential
       - chrome-gnome-shell

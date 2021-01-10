@@ -30,3 +30,4 @@
     - { role: nodejs, become: true }
     - { role: pixelart.chrome, become: true }
     - { role: remmina, become: true }
+    - { role: freedomofpress.signal-desktop, become: true }

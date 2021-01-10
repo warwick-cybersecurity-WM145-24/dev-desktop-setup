@@ -13,3 +13,5 @@
 
 - name: gantsign.oh-my-zsh
   version: 2.3.0
+
+- name: freedomofpress.signal-desktop

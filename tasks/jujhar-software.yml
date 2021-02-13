@@ -75,6 +75,7 @@
       - vim-syntax-docker
       - vlc
       - xclip # to manipulate the clipboard
+      - xournal # drawing note taking and PDF annotation software
       - xstow
       - youtube-dl
       - zip

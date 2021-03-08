@@ -88,3 +88,4 @@
     name:
       #- aws-cli
       - termtime
+      - bpytop

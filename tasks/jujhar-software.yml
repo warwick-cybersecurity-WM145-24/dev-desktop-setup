@@ -80,6 +80,7 @@
       - youtube-dl
       - zip
       - zsh
+      - zsh-syntax-highlighting
     state: latest
     update_cache: true
 

@@ -40,10 +40,11 @@
       - nautilus-image-converter
       - nautilus-wipe
       - ncdu
+      - neofetch # get system deets to flex on others
       - nethogs
       - net-tools
       - nmap
-      - notepadqq #gedit replacement
+      - notepadqq # gedit replacement
       - obs-studio # live stream tool
       - openshot # video editor
       - openvpn

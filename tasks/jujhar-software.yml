@@ -44,7 +44,6 @@
       - nethogs
       - net-tools
       - nmap
-      - notepadqq # gedit replacement
       - obs-studio # live stream tool
       - openshot # video editor
       - openvpn

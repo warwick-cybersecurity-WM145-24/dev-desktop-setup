@@ -3,7 +3,7 @@ My ~~Ubuntu~~ desktop setup build using Ansible and tested using Docker and Vagr
 
 ## Usage
 
-Use with `ansible-pull` to initialise a local install
+Use with `ansible-pull` to initialise a local install on Ubuntu
 
 ```bash
 apt-get update && apt-get install -y ansible git
@@ -15,7 +15,11 @@ sudo ansible-pull --url https://github.com/jujhars13/my-desktop-setup.git
 Test in a Vagrant vm
 
 ```bash
+# ubuntu
 vagrant destroy -f && vagrant up
+
+# fedora
+VAGRANT_VAGRANTFILE=Vagrantfile.fedora vagrant destroy -f && vagrant up
 ```
 
 ## Inspired by

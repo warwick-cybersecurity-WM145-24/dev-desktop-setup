@@ -1,8 +1,20 @@
+- name:
+  ansible.builtin.package:
+    name:
+      - yum-plugin-priorities
+      - epel-release
+    when: ansible_distribution == 'Fedora'
+
+- name: Install ubuntu specific packages
+  ansible.builtin.package:
+    name:
+      - bambam # baby keyboard mashing software
+    when: ansible_distribution == 'Ubuntu'
+
 - name: Install Jujhar's Software
   ansible.builtin.package:
     name:
       - audacity
-      - bambam # baby keyboard mashing software
       - bmon
       - build-essential
       - chrome-gnome-shell

@@ -13,7 +13,7 @@ Use with `ansible-pull` to initialise a local install:
 apt-get update && apt-get install -y ansible git
 
 # on Fedora
-yum install -y ansible git
+dnf install -y ansible git
 
 # then
 sudo ansible-pull --url https://github.com/jujhars13/my-desktop-setup.git
@@ -24,10 +24,10 @@ sudo ansible-pull --url https://github.com/jujhars13/my-desktop-setup.git
 Test in a Vagrant VM:
 
 ```bash
-# ubuntu
+# Ubuntu
 vagrant destroy -f && vagrant up
 
-# fedora
+# Fedora
 VAGRANT_VAGRANTFILE=Vagrantfile.fedora vagrant destroy -f && vagrant up
 ```
 

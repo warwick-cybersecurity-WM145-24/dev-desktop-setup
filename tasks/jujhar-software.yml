@@ -1,6 +1,6 @@
-- name: Install Jujhar's apt Software
-  apt:
-    pkg:
+- name: Install Jujhar's Software
+  ansible.builtin.package:
+    name:
       - audacity
       - bambam # baby keyboard mashing software
       - bmon
@@ -83,7 +83,6 @@
       - zsh
       - zsh-syntax-highlighting
     state: latest
-    update_cache: true
 
 - name: Install python packages
   pip:

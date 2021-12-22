@@ -6,6 +6,7 @@
   until: add_repo_result.rc == 0
   retries: 3
   delay: 1
+  when: ansible_distribution == 'Ubuntu'
 
 - name: Update apt-cache
   apt:
@@ -13,3 +14,4 @@
     cache_valid_time: 3600
   register: result
   until: result is succeeded
+  when: ansible_distribution == 'Ubuntu'

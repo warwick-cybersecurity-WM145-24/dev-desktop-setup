@@ -1,5 +1,6 @@
 - name: Remove ubuntu dock
   command: apt remove -y gnome-shell-extension-ubuntu-dock
+  when: ansible_distribution == 'Ubuntu'
 
 - name: Set max file watches for crashplan inotify.
   lineinfile:

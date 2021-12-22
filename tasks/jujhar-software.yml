@@ -60,6 +60,7 @@
       - tar
       - terminator
       - tig
+      - timewarrior
       - tlp
       - tlp-rdw
       - tmux

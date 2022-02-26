@@ -71,6 +71,7 @@
       - remmina
       - remmina-plugin-rdp
       - remmina-plugin-vnc
+      - restic # badass backup
       - rsync
       - shellcheck
       - socat

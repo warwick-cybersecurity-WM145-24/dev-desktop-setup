@@ -46,6 +46,9 @@
       - liferea
       - make
       - mycli
+      - nemo # nice file manager
+      - nemo-fileroller
+      - nemo-font-manager
       - nautilus-admin
       - nautilus-extension-gnome-terminal
       - nautilus-font-manager
@@ -65,6 +68,9 @@
       - powertop
       - pwgen
       - python3-pip
+      - remmina
+      - remmina-plugin-rdp
+      - remmina-plugin-vnc
       - rsync
       - shellcheck
       - socat

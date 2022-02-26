@@ -1,12 +1,12 @@
 # My Desktop Setup
-My ~~Ubuntu~~ desktop setup build using Ansible and tested using Docker and Vagrant
+My ~~Ubuntu~~ desktop base setup using Ansible. Tested using Vagrant
 
 - Ubuntu (20)
 - Fedora (35)
 
 ## Usage
 
-Use with `ansible-pull` to initialise a local install:
+To install on vanilla setup use with `ansible-pull` to initialise a local install:
 
 ```bash
 # on Ubuntu

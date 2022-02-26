@@ -18,9 +18,7 @@ Vagrant.configure(2) do |config|
   apt-get update
   apt-get install -y ansible git
   # ansible-pull -v --url https://github.com/jujhars13/my-ubuntu-setup.git
-  ansible-playbook --connection=local --inventory 127.0.0.1, local.yml
-  #apt-get install -y python3-pip python3-dev libffi-dev libssl-dev openssh-server
-  #pip3 install ansible markupsafe
+  (cd /vagrant && ./run.sh)
   SHELL
 
   # config.vm.provision "ansible_local" do |ansible|

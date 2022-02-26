@@ -3,8 +3,8 @@
   become: true
 
   pre_tasks:
-    - import_tasks: tasks/general.yml
-      tags: general
+    - import_tasks: tasks/pre-tasks.yml
+      tags: pre-tasks
 
   tasks:
     - import_tasks: tasks/jujhar-software.yml

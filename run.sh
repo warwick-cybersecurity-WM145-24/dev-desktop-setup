@@ -5,4 +5,4 @@
     ansible-playbook -v \
         --connection=local \
         --inventory 127.0.0.1, \
-        playbook.yml)
+        local.yml)

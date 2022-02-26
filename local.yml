@@ -19,17 +19,21 @@
 
     # install imported galaxy roles
     - include_role:
-        name: "{{ item }}"
+        name: "{{ outer_item }}"
       with_items:
         - "{{ ansible_roles_from_galaxy_list }}"
+      loop_control:
+        loop_var: outer_item
 
     # install my own custom roles
     - include_role:
-          name: "{{ item }}"
+          name: "{{ outer_item }}"
       with_items:
         - dbeaver
         - desktop-cleanup
         - desktop-preferences
+      loop_control:
+        loop_var: outer_item
 
   post_tasks:
     - import_tasks: tasks/post-tasks.yml

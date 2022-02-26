@@ -11,8 +11,8 @@
       tags: software
 
   post_tasks:
-    - import_tasks: tasks/jujhar-config.yml
-      tags: config
+    - import_tasks: tasks/post-tasks.yml
+      tags: post-tasks
 
 - name: Jujhar extra packages
   hosts: localhost

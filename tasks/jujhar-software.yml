@@ -1,15 +1,15 @@
-- name:
+- name: Install Fedora specific packages
+  when: ansible_distribution == 'Fedora'
   ansible.builtin.package:
     name:
       - yum-plugin-priorities
       - epel-release
-    when: ansible_distribution == 'Fedora'
 
-- name: Install ubuntu specific packages
+- name: Install Ubuntu specific packages
+  when: ansible_distribution == 'Ubuntu'
   ansible.builtin.package:
     name:
       - bambam # baby keyboard mashing software
-    when: ansible_distribution == 'Ubuntu'
 
 - name: Install Jujhar's Software
   ansible.builtin.package:

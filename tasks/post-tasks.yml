@@ -7,7 +7,7 @@
 #     path: /etc/sysctl.conf
 #     line: fs.inotify.max_user_watches=1048576
 
-- name: Install Jujhar sudoers
+- name: Install sudoers
   copy:
     dest: /etc/sudoers.d/jujhar
     content: jujhar ALL=(ALL) NOPASSWD:ALL

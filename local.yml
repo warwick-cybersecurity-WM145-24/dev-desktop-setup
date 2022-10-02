@@ -10,7 +10,7 @@
 
   tasks:
     # install my yum/apt repo software
-    - import_tasks: tasks/jujhar-software.yml
+    - import_tasks: tasks/install-software.yml
 
     # import galaxy roles locally
     - command: ansible-galaxy install {{ item }} --roles-path /usr/share/ansible/roles
@@ -29,8 +29,6 @@
     - include_role:
           name: "{{ outer_item }}"
       with_items:
-        - dbeaver
-        - desktop-cleanup
         - desktop-preferences
       loop_control:
         loop_var: outer_item

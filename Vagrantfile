@@ -16,7 +16,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision "prepare-installation", privileged: true, type: "shell", inline: <<-SHELL
   apt-get update
-  apt-get install -y ansible git
+  apt-get install -y ansible-core git
   # ansible-pull -v --url https://github.com/warwick-cybersecurity-WM145-24/dev-desktop-setup
   (cd /vagrant && ./run.sh)
   SHELL

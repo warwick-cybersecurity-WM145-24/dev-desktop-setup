@@ -20,8 +20,6 @@
       - gimp
       - gnome
       - gnome-tweaks
-      - gnome-shell-extension-no-annoyance
-      - gnome-shell-extension-caffeine
       - golang-go
       - golint
       - grep
@@ -42,8 +40,6 @@
       - nethogs
       - net-tools
       - nmap
-      - obs-studio # live stream tool
-      - openshot # video editor
       - pandoc
       - pass
       - powertop
